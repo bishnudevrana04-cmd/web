@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphic Designer Portfolio</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        background: #f7f7f7;
+        color: #333;
+        scroll-behavior: smooth;
+    }
+
+    header {
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        margin: 15px 0;
+        font-size: 1.2rem;
+    }
+
+    header button {
+        padding: 12px 30px;
+        border: none;
+        border-radius: 30px;
+        background: white;
+        color: #764ba2;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    header button:hover {
+        transform: scale(1.1);
+    }
+
+    section {
+        padding: 80px 10%;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.2rem;
+        color: #764ba2;
+    }
+
+    /* ABOUT */
+    .about {
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    /* SKILLS */
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .skill {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .skill:hover {
+        transform: translateY(-10px);
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .work {
+        height: 200px;
+        background: #ddd;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        color: #666;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .work:hover {
+        background: #764ba2;
+        color: white;
+    }
+
+    /* CONTACT */
+    .contact {
+        text-align: center;
+    }
+
+    .contact input, .contact textarea {
+        width: 100%;
+        max-width: 400px;
+        margin: 10px 0;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+
+    .contact button {
+        margin-top: 15px;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 30px;
+        background: #764ba2;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .contact button:hover {
+        background: #667eea;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #222;
+        color: white;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+    <h1>Hello, I'm Alex</h1>
+    <p>Graphic Designer | Creative Thinker | Visual Storyteller</p>
+    <button onclick="scrollToSection('about')">View My Work</button>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+        I am a passionate graphic designer who loves creating beautiful,
+        meaningful visuals. From branding to social media designs,
+        I turn ideas into eye-catching designs.
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <h2>My Skills</h2>
+    <div class="skills">
+        <div class="skill">Photoshop</div>
+        <div class="skill">Illustrator</div>
+        <div class="skill">Brand Identity</div>
+        <div class="skill">UI / UX Design</div>
+        <div class="skill">Social Media Design</div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section>
+    <h2>My Work</h2>
+    <div class="portfolio">
+        <div class="work">Project 1</div>
+        <div class="work">Project 2</div>
+        <div class="work">Project 3</div>
+        <div class="work">Project 4</div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+    <h2>Contact Me</h2>
+    <div class="contact">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="4" placeholder="Your Message"></textarea><br>
+        <button onclick="sendMessage()">Send Message</button>
+    </div>
+</section>
+
+<footer>
+    © 2026 Alex | Graphic Designer
+</footer>
+
+<script>
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function sendMessage() {
+        alert("Thank you! Your message has been sent 💌");
+    }
+</script>
+
+</body>
+</html>
